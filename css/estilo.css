@@ -33,21 +33,22 @@ h6 {
     height: 40px;
     border-radius: 50px;
     transition: all 0.4s;
-}
+    }
 
-.back-to-top i {
+    .back-to-top i {
     font-size: 28px;
     color: #fff;
     line-height: 0;
-}
-.back-to-top:hover {
+    }
+
+    .back-to-top:hover {
     background: #2eafec;
     color: #fff;
-}
-.back-to-top.active{
+    }
+    .back-to-top.active{
     visibility: visible;
     opacity: 1;
-}
+    }
 /* =========================================================================================================
 /* HEADER
 ========================================================================================================*/
@@ -60,16 +61,19 @@ h6 {
     width: 300px;
     transition: all ease-in-out 0.5s;
     z-index: 9997;
+    transition: all 0.5s;
     padding: 0 15px;
     background: #040b14;
     overflow-y: auto;
 }
+
 #header .profile img{
     margin: 15px auto;
     display: block;
     width: 120px;
-    border: 8px solid #4d4d4d;
+    border: 8px solid #2c2f3f;
 }
+
 #header .profile h1 {
     font-size: 24px;
     margin: 0;
@@ -78,11 +82,13 @@ h6 {
     text-align-last: center;
     font-family: "Poppins", sans-serif;
 }
+
 #header .profile h1 a,
 #header .profile h1 a:hover {
     color: #fff;
     text-decoration: none;
 }
+
 #header .profile .social-links a {
     font-size: 18px;
     display: inline-block;
@@ -108,8 +114,7 @@ h6 {
 #main {
     margin-left: 300px;
 }
-.container,
-.container-fluid {
+.container, .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -145,7 +150,7 @@ h6 {
 .nav-menu a:focus{
     display: flex;
     align-items: center;
-    color: #a8a9b4;
+    color: #ffffff;
     padding: 12px 15px;
     margin-bottom: 8px;
     transition: 0.3s;
@@ -171,7 +176,7 @@ h6 {
     color: #37b3ed;
 }
 
-/* mobile navigation */
+/* mobile menu */
 .mobile-nav-toggle {
     position: fixed;
     right: 15px;
@@ -200,7 +205,7 @@ h6 {
 }
 
 /* 
-=================== FIM HERO ========================== 
+=================== HERO ========================== 
 */
 #hero {
     width: 100%;
@@ -259,7 +264,13 @@ h6 {
     }
 }
 /*    Section Geral    */
-
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+.section-bg{
+    background: #f5f8fd;
+}
 .section-title{
     padding-bottom: 30px;
 }
@@ -284,6 +295,7 @@ h6 {
 .section-title p {
     margin-bottom: 0;
 }
+
 /*   Sobre    ==============   */
 .about .content h3{
     font-weight: 700;
@@ -368,6 +380,25 @@ h6 {
     font-family: "Poppins", sans-serif;
     color: #040b14;
 }
+.skill .progress .skill .val {
+    background: #c9c9c9;
+    height: 10px;
+}
+.skill .progress-bar{
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background: #149ddd;
+}
+
+/* RESUMO */
+.resume .resume-title{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #040b14;
+}
 .resume .resume-item{
     padding: 0 0 20px 20px;
     margin-top: -2px;
@@ -385,7 +416,7 @@ h6 {
 }
 .resume .resume-item h5{
     font-size: 16px;
-    background: #e3edf9;
+    background: #e4edf9;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -397,6 +428,11 @@ h6 {
 .resume .resume-item ul li{
     padding-bottom: 10px;
 }
+/* .resume .resume-item:last-child{
+    padding-bottom: 0;
+}
+*/
+
 .resume .resume-item::before {
     content: "";
     position: absolute;
@@ -407,4 +443,267 @@ h6 {
     top: 0;
     background: #fff;
     border: 2px solid #122f57;
+}
+/* Portifolio */
+.portfolio .portfolio-item{
+    margin-bottom: 30px;
+}
+.portfolio #portfolio-filters {
+    padding: 0%;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 2px 15px;
+}
+.portfolio #portfolio-filters li{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #040b14;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-filter li:hover,
+.portfolio #portfolio-filter li.filter-active {
+    color: #149ddd;
+}
+.portfolio #portfolio-filters li:last-child{
+    margin-right: 0;
+}
+.portfolio .portfolio-wrap{
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+    color:  #fff;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(20, 157, 221, 0.75);
+    transition: 0.3s;
+    width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover{
+    background: rgba(20, 157, 221, 0.95);
+}
+.portfolio .portfolio-wrap:hover::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-links{
+    opacity: 1;
+    bottom: 0;
+}
+
+/** PAGINA DETALHES /// CERTIFICADOS ***/
+.portfolio-details {
+    padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+    width: 100%;
+}
+.por.portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 20px;
+    position:  relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    opacity: 1;
+    border: 1px solid #149ddd;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet.active{
+    background: #149ddd;
+}
+.portfolio-details .portfolio-info {
+    background: #149ddd;
+}
+.portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c9c9c9;
+}
+.portfolio-details .portfolio-info ul{
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li+li {
+    margin-top: 10px
+}
+.portfolio-details .portfolio-description{
+    padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+    padding: 0;
+}
+/* SERVICOS */ 
+
+
+
+/* AVALIAÇÕES */
+
+
+
+
+/* CONTATOS */
+.contact {
+    padding-bottom: 130px;
+}
+.contact .info {
+    padding: 30px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+}
+.contact .info i {
+    font-size: 20px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #050d18;
+}
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #122f57;
+}
+.contact .info .email p {
+    padding-top: 5px;
+}
+
+.contact .info .address:hover i,
+.contact .info .email:hover i,
+.contact .info .phone:hover i {
+    background: #149ddd;
+    color: #c9c9c9;
+}
+
+.contact .php-email-form{
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+}
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: #16b10b;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: red;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+.contact .php-email-form .send-message {
+    display: none;
+    color: #fff;
+    background: #149ddd;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top: #eee;
+    animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form .form-group {
+    margin-bottom: 15px;
+}
+.contact .php-email-form label {
+    padding-bottom: 8px;
+}
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+.contact .php-email-form input {
+    height: 44px;
+}
+.contact .php-email-form textarea {
+    padding: 10px 15px;
+}
+.contact .php-email-form button[type=submit] {
+    background: #149ddd;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+.contact .php-email-form button[type=submit]:hover {
+    background: #122f57;
 }
